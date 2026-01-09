@@ -2,7 +2,7 @@ import heapq
 
 def smallestRange(nums: list[list[int]]) -> list[int]:
     heap = []
-    current_max = nums[0][0]
+    current_max = float('-inf')
     window = float('inf')
     
     for i,lst in enumerate(nums):

@@ -19,6 +19,14 @@ Keeps only relevant elements → `O(n log k)`
 **Common bug**:  
 Using full heap instead of size-k heap.
 
+```
+ 🧠 Interview Explanation
+ “I maintain a max-heap of size k.
+ The heap stores the k smallest elements seen so far.
+ If a new element is smaller than the largest in the heap, I replace it.
+ This gives O(n log k) time and O(k) space.”
+```
+
 ---
 
 ## 2️⃣ Kth Smallest / Largest Element
@@ -40,6 +48,11 @@ Smallest element must lie within next `k+1` range.
 
 **Time**: `O(n log k)`
 
+```
+🧠 Interview Explanation
+“Since the array is k-sorted, the smallest element must lie within the first k+1 elements.
+I maintain a min-heap of size k+1 and repeatedly extract the minimum, giving an O(n log k) solution.”
+```
 ---
 
 ## 4️⃣ Top K Frequent Elements
@@ -51,6 +64,11 @@ Smallest element must lie within next `k+1` range.
 Pop lowest frequency when size exceeds `k`.
 
 **Alternative**: Bucket sort (when range is small).
+
+```
+“I maintain a min-heap of size k containing the k largest elements seen so far.
+The smallest element in the heap is the kth largest overall.”
+```
 
 ---
 
