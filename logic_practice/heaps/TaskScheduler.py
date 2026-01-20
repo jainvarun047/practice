@@ -39,6 +39,7 @@ def leastInterval(tasks: list[str], n: int) -> int:
         # but only if the heap needs to be processed again
         if heap:
             res += cycle
+            
     return res
 
 # Samples:
